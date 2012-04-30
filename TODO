@@ -1,0 +1,25 @@
+Test data types DECIMAL, SERIAL
+
+How do we handle data type SERIAL ?
+
+data type bytea output/input format. Check which we can support (hex/escape).
+Hex was introduced in version 9.0. Now hex is default.
+http://www.postgresql.org/docs/9.1/static/datatype-binary.html
+We might need to do some processing in php depending on how the pg-pdo driver handles binary strings.
+
+
+Type DATETIME does not exist in postgre
+
+
+How can we integrate the geometric types?
+
+tsvector, tsquery
+
+Array types.
+
+
+ALTER TABLE ADD COLUMN does not support FIRST/AFTER options
+
+ALTER TABLE ALTER COLUMN will not work as expected.
+
+SELECT column_name, data_type, udt_name, numeric_precision, is_nullable, column_default FROM information_schema.columns WHERE table_name LIKE 'te%' ORDER BY ordinal_position;
